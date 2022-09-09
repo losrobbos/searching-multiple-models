@@ -28,8 +28,6 @@ const insertQuestions = async () => {
   console.log(questionsCreated);
 };
 
-// insertQuestions();
-
 const searchAll = async (searchTerm) => {
   const questions = await Question.find({
     $or: [{ question: { $regex: searchTerm }}, { answer: { $regex: searchTerm } }],
@@ -41,6 +39,6 @@ const searchAll = async (searchTerm) => {
   console.log({ questions, prepos });
 };
 
+// insertQuestions();
 // insertPreps()
-// questionsSearch("fuck")
-searchAll("fuck")
+searchAll("Rambo")
